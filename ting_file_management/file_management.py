@@ -10,4 +10,3 @@ def txt_importer(path_file):
             return news_list
     except FileNotFoundError:
         return sys.stderr.write(f'Arquivo {path_file} não encontrado\n')
-
