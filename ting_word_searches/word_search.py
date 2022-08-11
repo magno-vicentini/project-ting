@@ -10,12 +10,11 @@ def exists_word(word, instance):
                 word_occurrence.append({"linha": repeated_word})
         if len(word_occurrence) == 0:
             return word_occurrence
-        response = {
+        result_from_word.append({
             "palavra": word.lower(),
             "arquivo": element['nome_do_arquivo'],
             "ocorrencias": word_occurrence
-        }
-        result_from_word.append(response)
+        })
     return result_from_word
 
 
@@ -34,10 +33,9 @@ def search_by_word(word, instance):
                     })
         if len(word_occurrence) == 0:
             return word_occurrence
-        response = {
+        result_from_word.append({
             "palavra": word.lower(),
             "arquivo": element['nome_do_arquivo'],
             "ocorrencias": word_occurrence
-        }
-        result_from_word.append(response)
+        })
     return result_from_word
